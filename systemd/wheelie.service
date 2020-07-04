@@ -1,0 +1,17 @@
+[Unit]
+Description=Wheelie controller
+After=network.targer
+
+[Service]
+Type=simple
+Environment=PYTHONIOENCODING='utf-8'
+Environment=PYTHONUNBUFFERED='x'
+Environment=FLASK_APP='api'
+User=pi
+Group=pi
+WorkingDirectory=/home/pi/wheelie
+ExecStart=/home/pi/wheelie/venv/bin/flask run
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.targer

@@ -22,8 +22,12 @@ class Car:
         self.steer = Motor(*devices['turn'])
 
     def forward(self):
-        self.front.forward(self.speed)
-        self.back.forward(self.speed)
+        self.front.forward(self._speed)
+        self.back.forward(self._speed)
+
+    def reverse(self):
+        self.front.backward(self._speed)
+        self.back.backward(self._speed)
 
     def stop(self):
         self.front.stop()
@@ -31,10 +35,10 @@ class Car:
         self.steer.stop()
 
     def turn_right(self):
-        self.steer.forward(self.turn)
+        self.steer.forward(self._turn)
 
     def turn_left(self):
-        self.steer.reverse(self.turn)
+        self.steer.backward(self._turn)
 
     def straight(self):
         self.steer.stop()
@@ -46,3 +50,5 @@ class Car:
     def turn_speed(self, value):
         if 0 <= value and value <= 1:
             self._turn = value
+
+car = Car()
