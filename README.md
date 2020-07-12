@@ -13,7 +13,7 @@ Each motor connector (white/green) requires a separate motor controller.  The po
 
 ## Motor Controllers
 
-![Motor controllers]!(img/motor_controller_module.png)
+[Motor controllers](img/motor_controller_module.png)
 
 Aideepen 5pcs 1.5A 2 Way DC Motor Driver Module Speed Dual H-Bridge Replace Stepper L298N 
 
@@ -75,5 +75,5 @@ I haven't determined the angles, and they would be determined by the load on the
 
 # Connection Diagram
 
-![Connections]!(img/wiring.png)
+[Connections](img/wiring.png)
 
